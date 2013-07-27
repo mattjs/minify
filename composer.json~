@@ -1,6 +1,15 @@
 {
     "name": "mattjs/minify",
     "description": "ZF2 Resource Minify",
+    "license": "BSD-2-Clause",
+    "autoload": {
+        "psr-0": {
+            "Mlib": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    },
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": ">2.2.0rc1",
