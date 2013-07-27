@@ -3,8 +3,8 @@ namespace Minify;
 
 class Minify {
 	const CLOSURE_API_URL = 'http://closure-compiler.appspot.com/compile';
-	const SIMPLE_DIR = '/module/Minify/files/simple';
-	const COMPLEX_DIR = '/module/Minify/files/complex';
+	const SIMPLE_DIR = '/data/Minify/files/simple';
+	const COMPLEX_DIR = '/data/Minify/files/complex';
 	
 	private $params = array();
 	

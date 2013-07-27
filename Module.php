@@ -37,6 +37,16 @@ class Module
     public function getServiceConfig() {
         return array(
             'factories' => array(
+            	'Minify' => function($sm) {
+	            	if(!$sm->has('Minify')) {
+	            		$config = $sm->get('config');
+	                    $minify = new Core();
+						$sm->setService('Minify', $account);
+					} else {
+						$minify = $sm->get('Minify');
+					}
+	                return $minify;
+	            },
             ),
         );
     }	
