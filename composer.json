@@ -1,0 +1,9 @@
+{
+    "name": "mattjs/minify",
+    "description": "ZF2 Resource Minify",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": ">2.2.0rc1",
+    }
+}
+
