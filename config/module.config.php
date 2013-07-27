@@ -7,7 +7,7 @@ return array(
                 'options' => array(
                     'route'    => '/min',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Min\Controller',
+                        '__NAMESPACE__' => 'Minify\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),
@@ -26,11 +26,9 @@ return array(
             ),             
         ),
     ),
-    'service_manager' => array(
-    ),
     'controllers' => array(
         'invokables' => array(
-            'Min\Controller\Index' => 'Min\Controller\IndexController',
+            'Minify\Controller\Index' => 'Minify\Controller\IndexController',
         ),
     ),
     'view_manager' => array(
@@ -40,13 +38,12 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/min'           => __DIR__ . '/../view/layout/min.phtml',
-            'min/index/index' => __DIR__ . '/../view/min/index/index.phtml',
+            'layout/minify'           => __DIR__ . '/../view/layout/minify.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),
         'template_path_stack' => array(
-           'min' => __DIR__ . '/../view',
+           'minify' => __DIR__ . '/../view',
         ),
     ),
 );

@@ -1,6 +1,6 @@
 <?php
 
-namespace Min;
+namespace Minify;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -17,7 +17,7 @@ class Module
 		
 		$eventManager->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
 			$controller      = $e->getTarget();
-			$controller->layout('layout/min');
+			$controller->layout('layout/minify');
         }, 100);		
 		
 		// Create a low priority dispatch event 'postDispatch'

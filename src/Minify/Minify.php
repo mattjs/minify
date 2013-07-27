@@ -1,5 +1,5 @@
 <?php
-namespace Min\Model;
+namespace Minify;
 
 class Minify {
 	const CLOSURE_API_URL = 'http://closure-compiler.appspot.com/compile';

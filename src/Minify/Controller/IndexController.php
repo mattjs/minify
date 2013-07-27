@@ -1,11 +1,9 @@
 <?php
 
-namespace Min\Controller;
+namespace Minify\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-
-use Min\Model\Minify;
 
 class IndexController extends AbstractActionController {
 	
