@@ -42,7 +42,7 @@ class Core {
 	public function css_html() {
 		$result = '';
 		for($i = 0; $i < count($this->css_files); $i++) {
-			$result .= '<link type="text/css" href="/css/'.$this->css_files[$i].'.css'.($this->cache_bust?'?cb='.time():'').'" rel="stylesheet" />'."\n";
+			$result .= '<link type="text/css" href="'.$this->css_files[$i]($this->cache_bust?'?cb='.time():'').'" rel="stylesheet" />'."\n";
 		}
 		return $result;
 	}
