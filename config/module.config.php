@@ -12,16 +12,18 @@ return array(
                         'action'        => 'index',
                     ),
                 ),
-                'may_terminate' => true,
-                /*'child_routes' => array(
-                	'query' => array(
-                		'type' => 'Query',
-                		'options' => array(
-                			'constraints' => array(
-								'f[]' => '[\w\d\/\.\-]*'
-							)
-			           	)
-			        ),
+                /*'may_terminate' => true,
+                'child_routes' => array(
+                	'default' => array(
+	                	'type' => 'Segment',
+						'options' => array(
+							'route' => '/:type/:hash',
+							'constraints' => array(
+								'type' => 'js|css',
+								'hash' => '[\w\d\.\-]+'
+							),
+						)
+					)
                 ),*/
             ),             
         ),
@@ -32,8 +34,8 @@ return array(
         ),
     ),
     'view_manager' => array(
-        'display_not_found_reason' => false,
-        'display_exceptions'       => false,
+        'display_not_found_reason' => true,
+        'display_exceptions'       => true,
         'template_path_stack' => array(
            'minify' => __DIR__ . '/../view',
         ),

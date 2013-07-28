@@ -13,7 +13,7 @@ class IndexController extends AbstractActionController {
 		$view = array();
 		
 		if($files) {
-			$minify = new Minify();
+			$minify = new \Minify\Minify();
 			$view['file'] = $minify->make($files);
 		} else {
 			$view['file']['content_type'] = 'text/html';

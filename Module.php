@@ -14,19 +14,6 @@ class Module
         $moduleRouteListener->attach($eventManager);
 		
 		$sharedManager = $eventManager->getSharedManager();
-		
-		$eventManager->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
-			$controller      = $e->getTarget();
-			$controller->layout('layout/minify');
-        }, 100);		
-		
-		// Create a low priority dispatch event 'postDispatch'
-		$sharedManager->attach(__NAMESPACE__, 'dispatch', function($e) {
-			$controller = $e->getTarget();
-			if(method_exists($controller, 'postDispatch')) {
-				$controller->postDispatch();
-			}
-		});
     }
 
     public function getConfig()
@@ -37,11 +24,11 @@ class Module
     public function getServiceConfig() {
         return array(
             'factories' => array(
-            	'Minify' => function($sm) {
+            	'Minify\Core' => function($sm) {
 	            	if(!$sm->has('Minify')) {
 	            		$config = $sm->get('config');
-	                    $minify = new Core();
-						$sm->setService('Minify', $account);
+	                    $minify = new Core($config['minify']);
+						$sm->setService('Minify', $minify);
 					} else {
 						$minify = $sm->get('Minify');
 					}
