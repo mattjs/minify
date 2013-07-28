@@ -18,7 +18,7 @@ class Module
 		$eventManager->getSharedManager()->attach(__NAMESPACE__, 'dispatch', function($e) {
 			$controller      = $e->getTarget();
 			$controller->layout('layout/minify');
-        }, 100);		
+        }, 100);
 		
 		// Create a low priority dispatch event 'postDispatch'
 		$sharedManager->attach(__NAMESPACE__, 'dispatch', function($e) {
