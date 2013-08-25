@@ -1,8 +1,6 @@
 <?php
 namespace Minify;
 
-use Javascript;
-
 class Core {
 	protected $minify_javascript;
 	protected $minify_css;
