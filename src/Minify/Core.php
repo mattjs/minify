@@ -16,7 +16,7 @@ class Core {
 	}
 	
 	public function add_css($file_path) {
-		$this->css_files[] = $file_path;
+		$this->css[] = $file_path;
 	}
 	
 	public function add_js($file_path, $minify=true) {
@@ -25,8 +25,8 @@ class Core {
 	
 	public function css_html() {
 		$result = '';
-		for($i = 0; $i < count($this->css_files); $i++) {
-			$result .= '<link type="text/css" href="'.$this->css_files[$i].($this->cache_bust?'?cb='.time():'').'" rel="stylesheet" />'."\n";
+		for($i = 0; $i < count($this->css); $i++) {
+			$result .= '<link type="text/css" href="'.$this->css[$i].($this->cache_bust?'?cb='.time():'').'" rel="stylesheet" />'."\n";
 		}
 		return $result;
 	}
